@@ -1,0 +1,33 @@
+import { Link } from "react-router-dom";
+import ButtonComponent from "../ButtonComponent/ButtonComponent";
+
+function Item(props){
+    
+    const {title, img, price, description, id, category} = props;
+    
+    return (<div>
+        <div>
+            <img width="300" src={img} alt="image"></img>
+        </div>
+        <div>
+            <h2>{title} </h2>
+        </div>
+        <div>
+            <h4>$ {price}</h4>
+        </div>
+        <div>
+            <small> {description} </small>
+        </div>
+        <div>
+            <h5> {category}</h5>
+        </div>
+        <Link to={`/product/${id}`}>
+            <ButtonComponent>See Product</ButtonComponent>
+        </Link>
+    </div>
+    );
+}
+
+
+
+export default Item;
