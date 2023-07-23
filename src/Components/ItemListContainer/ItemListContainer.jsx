@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
-import getData from "../../services/asyncMock";
+import getData, {getCategoryData} from "../../services/asyncMock";
 import Item from "../Item/item";
+import { useParams } from "react-router-dom";
 
 function ItemListContainer (props) {
-
     const [products, setProducts] = useState([]);
+    const {categoryId} = useParams()
 
     async function requestProducts(){
-        const response = await getData();
+
+        let response = categoryId? await getCategoryData(categoryId) : await getData();
         setProducts(response);
     }
 
@@ -38,8 +40,6 @@ function ItemListContainer (props) {
     </div>
     )
 }
-
-
 
 
 export default ItemListContainer;

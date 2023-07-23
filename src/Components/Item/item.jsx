@@ -3,7 +3,7 @@ import ButtonComponent from "../ButtonComponent/ButtonComponent";
 
 function Item(props){
     
-    const {title, img, price, description, id, category} = props;
+    const {id, title, img, price, description, category} = props;
     
     return (<div>
         <div>

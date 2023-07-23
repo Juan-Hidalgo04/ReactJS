@@ -11,9 +11,9 @@ function NavBar () {
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
               <div class="navbar-nav">
-                <Link class="nav-link active" aria-current="page" to="/">Packages</Link>
-                <Link class="nav-link" to="/">Beach</Link>
-                <Link class="nav-link" to="/">Camping</Link>
+                <Link class="nav-link active" aria-current="page" to="/category/Packages">Packages</Link>
+                <Link class="nav-link" to="/category/Beach">Beach</Link>
+                <Link class="nav-link" to="/category/Camping">Camping</Link>
                 <Link class="nav-link" to="/"><CartWidget/></Link>
               </div>
           </div>
