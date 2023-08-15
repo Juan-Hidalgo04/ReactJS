@@ -1,6 +1,6 @@
-const products = [
+const products = [ 
   {
-    title: "Europe",
+    title: "Europe Package",
     id: 1,
     stock: 4,
     description: "5 days visiting the most worderful cities in Europe.",
@@ -9,7 +9,7 @@ const products = [
     category: "Packages"
   },
   {
-    title: "America",
+    title: "America Package",
     id: 2,
     stock: 4,
     description: "5 days visiting the most worderful cities in South America.",
@@ -18,7 +18,7 @@ const products = [
     category: "Packages"
   },
   {
-    title: "Africa",
+    title: "Africa Package",
     id: 3,
     stock: 4,
     description: "5 days visiting the most worderful cities in Africa.",
@@ -27,7 +27,7 @@ const products = [
     category: "Packages"
   }, 
   {
-    title: "Asia",
+    title: "Asia Package",
     id: 4,
     stock: 4,
     description: "5 days visiting the most worderful cities in Asia.",

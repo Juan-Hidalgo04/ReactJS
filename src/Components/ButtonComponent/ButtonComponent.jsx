@@ -9,7 +9,8 @@ function ButtonComponent(props) {
 
     return (
       <div>
-        <button style={styleButton} className="btn">{children} </button>
+        <button onClick={props.onClick} style={styleButton} className="btn">
+          {children} </button>
       </div>
     );
   }

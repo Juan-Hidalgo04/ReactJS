@@ -1,45 +1,37 @@
 import { useState, useEffect } from "react";
-import getData, {getCategoryData} from "../../services/asyncMock";
-import Item from "../Item/item";
+import { getData, getCategoryData } from "../../services/firebase";
 import { useParams } from "react-router-dom";
+import { DotSpinner } from '@uiball/loaders';
+import ItemList from "./ItemList";
+
 
 function ItemListContainer (props) {
-    const [products, setProducts] = useState([]);
-    const {categoryId} = useParams()
-
+  const [products, setProducts] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+    
+  const {categoryId} = useParams();
+    
+  useEffect(() => {
+    setIsLoading(true);
     async function requestProducts(){
-
-        let response = categoryId? await getCategoryData(categoryId) : await getData();
-        setProducts(response);
+      let response = categoryId
+        ? await getCategoryData(categoryId) 
+        : await getData();
+      setProducts(response);
+      setIsLoading(false);
     }
 
-    useEffect(() => {
-        requestProducts();
-    }, []);
-    
-    return (
-    <div className="main"> 
-        {props.greeting}
-        <br/>
-        We are <b> Juan & Emi </b> from <strong> Water in the Shoes. </strong>
-        <br/>
-        We live by the motto <strong> “Adventure is for Everyone” </strong> because we 
-        believe that you do not have to be an uber-athlete, adrenaline junkie, or a part of the ultra-rich to be an adventurer!
-        All you need is the desire to achieve something <i> more!</i> 
-    
-    <div>
-        <h1>Products</h1>
-        <div className="main">
-            {products.map((item) => {
-            return <Item key={item.id} {...item} />;
-            })}
-        </div>
-        
-    </div>
-    
-    </div>
-    )
-}
+      requestProducts();
+    }, [categoryId]);
 
+    if(isLoading){
+        return  <DotSpinner size={80} speed={0.9} color="black" />
+    }
+    else {
+        return (products.length === 0)
+        ? <p>There are not available products for that request.</p>
+        : <ItemList products={products} />
+    }
+}
 
 export default ItemListContainer;
