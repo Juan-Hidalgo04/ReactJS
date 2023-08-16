@@ -1,10 +1,13 @@
 import React from 'react';
 import { useContext } from 'react';
 import { cartContext } from '../../Context/cartContext';
+import { Link } from 'react-router-dom';
 
 
 function CartContainer() {
   const { cart, removeItem } = useContext(cartContext);
+ 
+
 
   return (
     <div>
@@ -20,10 +23,7 @@ function CartContainer() {
             </div>
           ))}
           <br />
-          <div>
-            Subtotal: $999
-          </div>
-          <button> Proceed to checkout </button>
+          <Link to="/checkout">Proceed to checkout</Link>
     </div>
   );
 }
