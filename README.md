@@ -1,4 +1,22 @@
-# Getting Started with Create React App
+
+Ecommerce React Juan Hidalgo - Coderhouse
+
+Hi tehre. This is my final project for the ReactJS Course on CoderHouse. It was oriented to a travelshop where you can find all you need for your travels and adventures!
+
+## Frontend
+
+React.js
+
+### Frontend
+
+Firestore
+
+## Library
+
+Bootstrap
+
+
+<!-- # Getting Started with Create React App
 
 This project was bootstraped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -67,4 +85,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
